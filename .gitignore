@@ -1,0 +1,28 @@
+# Backend (Python)
+backend/.venv/
+**/__pycache__/
+backend/**/*.egg-info/
+backend/.pytest_cache/
+backend/.ruff_cache/
+backend/.coverage
+backend/htmlcov/
+backend/.env
+
+# Frontend (Node/React)
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Env (raiz, usado pelo docker-compose)
+/.env
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+
+# Metadados do Windows (zone identifier de downloads), quebram clone/checkout
+*:Zone.Identifier
+
+# OpenSpec (local tool cache, se houver)
+.openspec/cache/
