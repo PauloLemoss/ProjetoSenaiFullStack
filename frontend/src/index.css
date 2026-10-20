@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Tokens de cor nomeados por função (frontend-design-system, design.md). */
+  --color-bg: #ffffff;
+  --color-bg-muted: #f4f5f7;
+  --color-surface: #ffffff;
+  --color-border: #e2e4e9;
+  --color-text: #1f2430;
+  --color-text-muted: #6b7280;
+  --color-primary: #2f6fed;
+  --color-success: #1a7f37;
+  --color-warning: #9a6700;
+  --color-danger: #c3302a;
+  --color-success-bg: #eaf7ee;
+  --color-warning-bg: #fff8e5;
+  --color-danger-bg: #fdecec;
+
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  /* Escala tipográfica compartilhada. */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    font: inherit;
+  }
+
+  input,
+  select,
+  textarea {
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+  }
+
+  .input-field {
+    @apply w-full px-2.5 py-1.5 rounded-md border border-border bg-surface text-text text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-colors;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-md bg-primary text-white hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-md bg-surface text-text border border-border hover:bg-bg-muted focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center px-3 py-1.5 text-sm font-medium rounded-md bg-danger text-white hover:bg-danger/90 focus:outline-none focus:ring-2 focus:ring-danger focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+  }
+
+  .drawer-panel {
+    animation: drawer-slide-in 0.2s ease-out;
+  }
+
+  @keyframes drawer-slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
