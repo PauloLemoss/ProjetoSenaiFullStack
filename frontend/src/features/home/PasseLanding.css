@@ -1,0 +1,395 @@
+.passe-page,
+.passe-page * {
+  box-sizing: border-box;
+}
+
+.passe-page {
+  min-height: calc(100vh - 48px);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 12px;
+  background: #fff;
+  color: #101827;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+.passe-frame {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 1160px);
+  min-height: 620px;
+  padding: 24px 28px 20px;
+  overflow: hidden;
+  border: 1px solid #e3e8ef;
+  border-radius: 19px;
+  background: rgba(255, 255, 255, 0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.passe-pitch {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: #edf0f5;
+  pointer-events: none;
+}
+
+.passe-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+
+.passe-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: #1761f5;
+  color: white;
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 800;
+  font-style: italic;
+  box-shadow: 0 3px 8px #1761f51c;
+}
+
+.passe-brand-name {
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -1.1px;
+}
+
+.passe-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 27px;
+  padding: 5px 12px;
+  border: 1px solid #e7ebf1;
+  border-radius: 999px;
+  background: #fff;
+  color: #667085;
+  font-size: 10px;
+}
+
+.passe-status strong {
+  color: #26344b;
+  font-weight: 600;
+}
+
+.passe-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #12b76a;
+}
+
+.passe-hero {
+  width: 100%;
+  text-align: center;
+  padding-top: 22px;
+}
+
+.passe-hero h1 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 35px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  font-weight: 750;
+}
+
+.passe-hero > p {
+  margin: 10px 0 17px;
+  color: #7a8393;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.passe-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.passe-actions button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.passe-primary {
+  width: 165px;
+  height: 38px;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  background: #1761f5;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: 0 3px 7px #1761f51b;
+}
+
+.passe-primary span {
+  margin-left: 8px;
+  font-size: 15px;
+}
+
+.passe-test {
+  margin-left: 0;
+  color: #8b93a1;
+  font-size: 10px;
+}
+
+.passe-login {
+  padding: 7px 12px;
+  border: 1px solid #e4e9f1;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #344054;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.passe-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin: 18px 0 28px;
+  color: #6f7888;
+  font-size: 10px;
+}
+
+.passe-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.passe-stats b {
+  color: #687386;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.passe-stats strong {
+  color: #172033;
+  font-weight: 700;
+}
+
+.passe-stats i {
+  color: #d4d9e1;
+  font-style: normal;
+}
+
+.passe-features {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.passe-card {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  min-height: 151px;
+  padding: 12px 12px 11px;
+  border: 1px solid #e3e8ef;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.91);
+  box-shadow: 0 1px 2px #10182805;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.passe-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 3px 8px #1018280a;
+}
+
+.passe-card-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.passe-card-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #edf4ff;
+  color: #1761f5;
+  font-size: 16px;
+  line-height: 1;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.passe-card-number {
+  color: #7b8493;
+  font-size: 10px;
+}
+
+.passe-card h2 {
+  margin: 0 0 7px;
+  color: #172033;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.passe-card p {
+  margin: 0;
+  color: #778396;
+  font-size: 10px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.passe-footer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 19px;
+  color: #788395;
+  font-size: 10px;
+}
+
+.passe-footer span {
+  color: #6b7b91;
+  font-size: 13px;
+}
+
+@media (min-width: 1100px) {
+  .passe-frame {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 900px) {
+  .passe-page {
+    padding: 8px;
+  }
+
+  .passe-frame {
+    padding: 22px 20px;
+  }
+
+  .passe-features {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 10px;
+  }
+
+  .passe-card {
+    min-height: 140px;
+  }
+
+  .passe-stats {
+    gap: 9px;
+  }
+}
+
+@media (max-width: 560px) {
+  .passe-page {
+    display: block;
+    padding: 4px;
+  }
+
+  .passe-frame {
+    min-height: auto;
+    padding: 22px 14px 18px;
+    border-radius: 15px;
+  }
+
+  .passe-brand-name {
+    font-size: 23px;
+  }
+
+  .passe-status {
+    font-size: 9px;
+  }
+
+  .passe-hero {
+    padding-top: 25px;
+  }
+
+  .passe-hero h1 {
+    font-size: 27px;
+    letter-spacing: -1px;
+  }
+
+  .passe-hero > p {
+    font-size: 12px;
+  }
+
+  .passe-desktop-break {
+    display: none;
+  }
+
+  .passe-actions {
+    flex-wrap: wrap;
+  }
+
+  .passe-primary {
+    width: 145px;
+  }
+
+  .passe-stats {
+    gap: 9px 12px;
+    margin: 20px 0;
+    font-size: 10px;
+  }
+
+  .passe-stats i {
+    display: none;
+  }
+
+  .passe-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .passe-card {
+    min-height: 150px;
+    padding: 11px;
+  }
+
+  .passe-card p {
+    font-size: 10px;
+  }
+
+  .passe-footer {
+    justify-content: center;
+    text-align: center;
+    font-size: 9px;
+  }
+}
