@@ -1,10 +1,9 @@
 import { useEffect, useState, useCallback } from 'react'
 
 /**
- * Hook de dados genérico: orquestra carregando/vazio/erro para uma busca
- * (frontend-conventions, "Estados de carregamento, lista vazia e erro"),
- * deixando o componente só renderizar o que ele devolve (SOLID-S, ver
- * design.md "Responsabilidade única aplicada à arquitetura de telas").
+ * Hook de dados genérico: orquestra os estados de carregando, vazio e erro
+ * para uma busca assíncrona, deixando o componente responsável apenas por
+ * renderizar o resultado.
  *
  * `fetchFn` deve ser estável entre renders com os mesmos filtros — quem
  * chama normalmente passa uma função nova a cada render, por isso o hook

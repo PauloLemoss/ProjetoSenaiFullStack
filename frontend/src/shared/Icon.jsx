@@ -1,6 +1,5 @@
 /**
- * Ícones de linha simples (SVG inline), sem biblioteca externa
- * (frontend-design-system, design.md "Sem biblioteca de ícones").
+ * Ícones de linha simples (SVG inline), sem biblioteca externa.
  */
 const BASE_PROPS = {
   viewBox: '0 0 24 24',
@@ -153,23 +152,6 @@ export function IconPencil({ className = 'w-4 h-4' }) {
   return (
     <svg {...BASE_PROPS} className={className} aria-hidden="true">
       <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" />
-    </svg>
-  )
-}
-
-export function IconTrash({ className = 'w-4 h-4' }) {
-  return (
-    <svg {...BASE_PROPS} className={className} aria-hidden="true">
-      <polyline points="3 6 5 6 21 6" />
-      <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
-    </svg>
-  )
-}
-
-export function IconActivity({ className = 'w-4 h-4' }) {
-  return (
-    <svg {...BASE_PROPS} className={className} aria-hidden="true">
-      <path d="M22 12l-4 4-4-4-4 4-4-4" />
     </svg>
   )
 }
