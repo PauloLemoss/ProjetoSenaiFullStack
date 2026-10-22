@@ -1,7 +1,7 @@
 """Traducao de erros de validacao do Pydantic (`exc.errors()`) para a lista
-`errors` do corpo de resposta `400` (capability `api-conventions`).
+`errors` do corpo de resposta `400`.
 
-Regras (ver `design.md`, decisao 2):
+Regras:
 
 - `value_error` (validators customizados de campo ou cruzados): reusa o texto
   original em portugues, removendo o prefixo "Value error, " que o Pydantic v2

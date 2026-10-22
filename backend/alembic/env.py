@@ -10,23 +10,13 @@ from mercado_jogadores.jogadores.models import Jogador  # noqa: F401 (registra n
 from mercado_jogadores.liga.models import DueloPartida, Escalacao, Partida  # noqa: F401
 from mercado_jogadores.mercado.models import Contrato, Transacao  # noqa: F401
 
-# this is the Alembic Config object, which provides
-# access to the values within the .ini file in use.
 config = context.config
 config.set_main_option("sqlalchemy.url", get_settings().database_url)
 
-# Interpret the config file for Python logging.
-# This line sets up loggers basically.
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-# Metadata dos models SQLAlchemy, usada pelo --autogenerate.
 target_metadata = Base.metadata
-
-# other values from the config, defined by the needs of env.py,
-# can be acquired:
-# my_important_option = config.get_main_option("my_important_option")
-# ... etc.
 
 
 def run_migrations_offline() -> None:

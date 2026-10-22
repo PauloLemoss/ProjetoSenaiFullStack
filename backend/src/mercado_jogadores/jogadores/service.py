@@ -19,8 +19,6 @@ from mercado_jogadores.jogadores.models import Jogador
 from mercado_jogadores.jogadores.repository import FiltrosSql, JogadorRepository
 from mercado_jogadores.liga.repository import EscalacaoRepository
 
-CONDICOES_VALIDAS = ("APTO", "MAL_CONDICIONADO", "DOENTE")
-
 
 @dataclass
 class DadosCadastroJogador:

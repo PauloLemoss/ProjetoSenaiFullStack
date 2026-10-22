@@ -11,8 +11,7 @@ from mercado_jogadores.jogadores.models import Jogador
 @dataclass
 class FiltrosSql:
     """Filtros de coluna direta de GET /players (RN07) — sem risco de duplicar regra de
-    negócio, por isso aplicados em SQL. Busca por nome e valor de mercado não entram aqui
-    (ver design.md da change listagem-jogadores)."""
+    negócio, por isso aplicados em SQL."""
 
     position: str | None = None
     condition: str | None = None

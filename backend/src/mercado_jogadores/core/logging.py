@@ -1,5 +1,5 @@
-"""Registro de logs por requisição (barema B5, "Registro de logs"): uma linha legível, com
-data/hora, método, caminho e status, por requisição HTTP — via `structlog`, nunca `print`."""
+"""Registro de logs por requisição: uma linha legível, com data/hora, método,
+caminho e status, por requisição HTTP — via `structlog`, nunca `print`."""
 
 import logging
 

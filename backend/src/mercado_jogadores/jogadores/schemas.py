@@ -79,9 +79,6 @@ class JogadorCreate(BaseModel):
     @field_validator("agility", mode="after")
     @classmethod
     def _validar_agilidade_pela_idade(cls, value: int, info: ValidationInfo) -> int:
-        # `age` e declarado antes de `agility`; se a faixa de idade falhou, o
-        # campo nao esta em info.data e a checagem cruzada e pulada (decisao 3
-        # + mitigacao de risco do design.md).
         if "age" not in info.data:
             return value
         if info.data["age"] >= 35 and value > 85:
@@ -91,14 +88,10 @@ class JogadorCreate(BaseModel):
     @field_validator("potential", mode="after")
     @classmethod
     def _validar_potencial(cls, value: int, info: ValidationInfo) -> int:
-        # `potential` e o ultimo campo declarado, entao todos os atributos
-        # tecnicos e a idade ja estao validados quando este roda.
         if "age" not in info.data:
             return value
         atributos = [info.data.get(nome) for nome in _ATRIBUTOS]
         if None in atributos:
-            # algum atributo falhou na faixa simples: nao emite erro confuso
-            # sobre um campo que ainda nao passou na validacao propria.
             return value
         maior_atributo = max(atributos)
         if value < maior_atributo:
@@ -112,8 +105,6 @@ class JogadorCreate(BaseModel):
 
     @model_validator(mode="after")
     def _validar_soma_de_atributos(self) -> "JogadorCreate":
-        # Regra cruzada sem um unico campo dono: fica com field: null no corpo
-        # do erro (spec `api-conventions`, cenario "sem campo unico").
         soma_atributos = sum(getattr(self, nome) for nome in _ATRIBUTOS)
         if soma_atributos > 480:
             raise ValueError("A soma dos seis atributos não pode passar de 480.")
@@ -229,7 +220,6 @@ class JogadorRead(BaseModel):
 
 _INTEIRO_DE_QUERY = re.compile(r"^[1-9][0-9]*$")
 _DECIMAL_DE_QUERY = re.compile(r"^(0|[1-9][0-9]*)(\.[0-9]{1,2})?$")
-CampoDeOrdenacao = Literal["name", "value_asc", "value_desc", "age_asc", "age_desc", "position"]
 _SORT_VALIDOS = frozenset(("name", "value_asc", "value_desc", "age_asc", "age_desc", "position"))
 
 

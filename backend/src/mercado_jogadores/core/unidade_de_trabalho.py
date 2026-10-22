@@ -1,5 +1,5 @@
 """Unidade de trabalho das operações compostas (compra, venda, partida, escalação, alteração de
-condição que tira um titular) — ver design.md das changes `mercado` e `liga`.
+condição que tira um titular).
 
 Operações compostas escrevem em mais de uma tabela; o commit (ou rollback, se algo falhar no
 meio) acontece uma única vez, no fim, por esta abstração — o service continua dependendo só de

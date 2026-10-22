@@ -12,8 +12,7 @@ class Jogador(Base):
 
     Índices (RN07, listagem): `clube_id`, `posicao` e `condicao` atendem os filtros de coluna
     direta de `GET /players`; o índice parcial em `excluido_em` atende toda consulta (não só a
-    listagem), que sempre filtra `excluido_em IS NULL`. Busca por nome e valor de mercado não têm
-    índice aqui de propósito — ver design.md da change `listagem-jogadores`.
+    listagem), que sempre filtra `excluido_em IS NULL`.
     """
 
     __tablename__ = "jogadores"

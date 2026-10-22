@@ -2,7 +2,7 @@
 o router nunca as recalcula, só delega aqui.
 
 A validação de formato de `nome`/`sigla` e a correspondência sigla↔nome (função pura, sem
-banco) ficam no schema `ClubeCreate` (camada HTTP) — ver design.md. Aqui só as regras que
+banco) ficam no schema `ClubeCreate` (camada HTTP). Aqui só as regras que
 dependem de persistência: unicidade, limite de clubes e os valores calculados a cada consulta.
 """
 

@@ -2,7 +2,7 @@
 o router nunca as recalcula, só delega aqui.
 
 A validação de formato/intervalo de `club_id`/`loyalty_until` (RN01, "Limites de cada campo")
-fica no schema `BuyRequest` (camada HTTP) — ver design.md. Aqui só as regras que dependem de
+fica no schema `BuyRequest` (camada HTTP). Aqui só as regras que dependem de
 persistência e do estado do jogador/clube.
 """
 

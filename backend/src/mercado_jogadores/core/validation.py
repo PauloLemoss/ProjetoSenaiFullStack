@@ -1,4 +1,4 @@
-"""Utilitários de validação compartilhados por toda a API (capability `api-conventions`)."""
+"""Utilitários de validação compartilhados por toda a API."""
 
 import re
 import unicodedata
